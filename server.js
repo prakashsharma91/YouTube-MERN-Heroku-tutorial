@@ -27,11 +27,11 @@ const usersRouter = require("./routes/users");
 app.use("/exercises", exercisesRouter);
 app.use("/users", usersRouter);
 
-app.route("/").get((req, res) => {
-  res.send(
-    "Hello World, All free course and college projects available at BesidesCollege.org"
-  );
-});
+// app.route("/").get((req, res) => {
+//   res.send(
+//     "Hello World, All free course and college projects available at BesidesCollege.org"
+//   );
+// });
 
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
